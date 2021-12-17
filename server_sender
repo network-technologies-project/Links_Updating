@@ -1,0 +1,8 @@
+# #!/bin/bash
+
+echo &(ngrok http 8080 --log=stdout > 1.txt &)
+
+sleep 5 
+
+grep url= 1.txt
+
